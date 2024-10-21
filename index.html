@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MayorMenor</title>
+</head>
+<body>
+    <!--Damos un titulo a la web-->
+    <h1>Números Mator y Menor</h1>
+
+    <script>
+        /*Creacion de variables*/
+        var numeros = [];
+        var mayor;
+        var menor;
+
+        /*indicacion de lo que queremos que haga la ventana emergente*/
+        /*parseFloat ayuda con cadednas de tipo string*/
+        /*prompt crea la ventana emergente*/
+        /*push permite ir añadiendo elmentos*/
+        for (var i = 0; i < 5; i++) {
+            var numero = parseFloat(prompt("Ingrese el número " + (i + 1) + ":"));
+            numeros.push(numero);
+        }
+
+        mayor = numeros[0];
+        menor = numeros[0];
+
+        /*Damos las condicionantes*/
+        for (var j = 1; j < numeros.length; j++) {
+            if (numeros[j] > mayor) {
+                mayor = numeros[j];
+            } 
+            
+            if (numeros[j] < menor) {
+                menor = numeros[j];
+            }
+        }
+    
+        /*Imprimimos la información en la pagina*/
+        document.write("El numero mayor es: " + mayor)
+        document.write("<br>")
+        document.write("El numero menor es: " + menor)
+    </script>
+
+
+
+
+</body>
+</html>
